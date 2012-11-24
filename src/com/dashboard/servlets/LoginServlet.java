@@ -1,3 +1,8 @@
+/**
+ * @author amulya,pallavi,mrinalini,anshul,rashi,sindhusha
+ * Purpose : Servlet for Login
+ */
+
 package com.dashboard.servlets;
 
 import java.io.IOException;
@@ -24,6 +29,13 @@ import com.dashboard.utils.Utils;
 
 public class LoginServlet extends HttpServlet {
 	
+
+	/**
+	 * @param req - HttpServletRequest Object
+	 * @param resp - HttpServletResponse
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {

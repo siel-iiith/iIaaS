@@ -1,3 +1,8 @@
+/**
+ * @author amulya,pallavi,mrinalini,anshul,rashi,sindhusha
+ * Purpose: Servlet to terminate Instance
+ */
+
 package com.dashboard.servlets;
 
 import java.io.IOException;
@@ -15,6 +20,14 @@ import com.dashboard.utils.Connection;
 import com.dashboard.utils.Utils;
 
 public class TerminateInstanceServlet extends HttpServlet {
+
+
+	/**
+         * @param req - HttpServletRequest Object
+         * @param resp - HttpServletResponse Object
+         * @throws ServletException
+         * @throws IOException
+         */
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)

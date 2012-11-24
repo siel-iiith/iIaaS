@@ -1,3 +1,8 @@
+/**
+ * @author amulya,pallavi,mrinalini,anshul,rashi,sindhusha
+ * Purpose : Servlet to Create Instance
+ */
+
 package com.dashboard.servlets;
 
 import java.io.IOException;
@@ -20,6 +25,13 @@ import com.dashboard.utils.Utils;
 
 public class CreateInstanceServlet extends HttpServlet {
 
+
+	/**
+	 * @param req - HttpServletRequest
+	 * @param resp - HttpServletResponse
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {

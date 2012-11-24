@@ -1,3 +1,8 @@
+
+/**
+ * @author amulya,pallavi,mrinalini,anshul,rashi,sindhusha
+ * Purpose : Initialise all the constants for Cloud Services
+ */
 package com.dashboard.servlets;
 
 public interface Constants {
