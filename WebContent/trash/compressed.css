@@ -1,0 +1,926 @@
+
+html {
+    font-weight: normal;
+    margin: 0;
+    min-width: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    margin: 0 0 0 20px;
+    position: relative;
+    z-index: 0;
+}
+#headerWrapper {
+    overflow: hidden;
+    padding: 5px 0 7px;
+    position: relative;
+    z-index: 2;
+}
+#header {
+    margin: 0 auto;
+    max-width: 900px;
+    overflow: hidden;
+    padding-left: 15px;
+    position: relative;
+}
+#headerTitles {
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+#header h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#header h2 {
+    margin: 0 0 0 3px;
+    z-index: 12;
+}
+#contentWrapper {
+    margin: 0 auto 60px;
+    max-width: 900px;
+    min-height: 400px;
+    min-width: 400px;
+    padding: 0 20px 30px;
+    position: relative;
+    z-index: 1;
+}
+div.pageContent {
+    height: auto !important;
+}
+#content {
+    font-weight: normal;
+    position: relative;
+    transition: margin-left 600ms ease 0s;
+    z-index: 2;
+}
+#footer {
+    bottom: 0;
+    font-weight: lighter;
+    padding: 1px;
+    position: fixed;
+    right: 0;
+    text-decoration: none;
+    z-index: 50;
+}
+#footer:hover {
+    cursor: default;
+}
+img#arrowLeft, img#arrowRight {
+    display: none;
+    height: 32px;
+    margin-top: 60px;
+    opacity: 0.5;
+    position: absolute;
+}
+img#arrowLeft:hover, img#arrowRight:hover {
+    cursor: pointer;
+}
+.groupTitle {
+    position: absolute;
+    text-decoration: none;
+}
+.groupTitle h3 {
+    font-weight: lighter;
+    margin: 0;
+}
+#nav {
+    float: right;
+    margin-top: 10px;
+    vertical-align: middle;
+    z-index: 1;
+}
+.navItem {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    transition: background 100ms ease-in 0s;
+    z-index: 6;
+}
+.navItem img {
+    border: medium none;
+}
+#subNavWrapper {
+    height: 35px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    z-index: 4;
+}
+#subNav a {
+    display: inline-block;
+    height: 20px;
+    margin: 0 5px 0 0;
+    padding: 3px 8px;
+    text-decoration: none;
+    transition: height 0.2s ease 0s, box-shadow 0.4s ease-out 0s;
+    vertical-align: top;
+    z-index: 100;
+}
+#subNav a:hover {
+    height: 28px;
+}
+.smallSubNav {
+    font-size: 11px !important;
+    height: 16px !important;
+}
+.smallSubNav:hover {
+    height: 24px !important;
+}
+.tile {
+    color: #FFFFFF;
+    display: none;
+    font-weight: normal;
+    margin: 0 0 500px;
+    overflow: hidden;
+    padding: 1px;
+    position: absolute;
+    text-decoration: none;
+    transition: box-shadow 0.15s ease-out 0s;
+}
+.tile:visited {
+    color: #FFFFFF;
+}
+.tile img {
+    border: medium none;
+}
+.tile:hover {
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 0 10px #333333;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}
+.tileLabelWrapper {
+    position: absolute;
+    right: 0;
+    z-index: 11;
+}
+.tileLabel {
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+}
+.tileLabelDesc {
+    background-color: rgba(55, 55, 55, 0.6);
+    border-top: 1px solid #999999;
+    color: #CCCCCC;
+    font-size: 12px;
+    padding: 3px;
+}
+.showOnHover {
+    display: none;
+}
+.tileLabelWrapper.bottom {
+    bottom: 0;
+    left: 0;
+}
+.tileLabel.bottom {
+    border-bottom: 20px solid #777777;
+    border-right: 15px solid transparent;
+    height: 0;
+    line-height: 22px;
+    padding: 2px 2px 1px;
+}
+.tileLabelWrapper.top {
+    border-left: 15px solid transparent;
+    border-top: 20px solid #777777;
+    height: 0;
+    top: 0;
+    z-index: 15;
+}
+.tileLabel.top {
+    margin-top: -20px;
+    padding: 0 2px 2px;
+    position: relative;
+}
+.tileTitle {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 3px 3px 0 10px;
+    padding: 0;
+}
+.tileDesc {
+    font-size: 13px;
+    margin: 0 12px;
+    padding: 0;
+    position: absolute;
+}
+.tileImg:hover .tileLabelWrapper.bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.tileImg:hover .tileLabelWrapper.top {
+    margin-right: -1px;
+    margin-top: -1px;
+}
+.tileImg:hover .tileLabelDesc {
+    color: #FFFFFF;
+}
+a.noClick:hover, a.inactiveTile:hover {
+    border: medium none;
+    box-shadow: none;
+    cursor: default;
+    padding: 1px;
+}
+.tileImageSlider .tileImageSliderText {
+    font-size: 26px;
+    padding: 5px;
+    text-align: center;
+}
+html {
+    background-color: #DDDDDD;
+    color: #FFFFFF;
+    font-family: 'Open Sans',Segoe UI light,Tahoma,Helvetica,sans-serif;
+    font-size: 13px;
+}
+body {
+    background-color: #DDDDDD;
+}
+a {
+    color: #222222;
+    text-decoration: underline;
+}
+a:hover {
+    color: #789600;
+}
+em {
+    margin-right: 2px;
+}
+h1 {
+    color: #222222;
+    font-size: 38px;
+    font-weight: 300;
+    margin: 20px 0 0;
+}
+h2 {
+    color: #222222;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 20px 0 2px;
+}
+h3 {
+    color: #444444;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 20px 0 2px;
+}
+h4 {
+    color: #444444;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 15px 0 2px;
+}
+h5 {
+    color: #444444;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 13px 0 2px;
+}
+h6 {
+    color: #444444;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 0 2px;
+}
+.display-block {
+    display: block;
+}
+.margin-0 {
+    margin: 0;
+}
+.margin-t-0 {
+    margin-top: 0;
+}
+.margin-b-0 {
+    margin-bottom: 0;
+}
+.margin-t-20 {
+    margin-top: 20px;
+}
+.margin-t-40 {
+    margin-top: 40px;
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+.margin-b-40 {
+    margin-bottom: 40px;
+}
+.size-auto {
+    height: auto;
+    max-width: 100%;
+}
+.align-left {
+    display: block;
+    float: left;
+    text-align: left;
+}
+.align-right {
+    display: block;
+    float: right;
+    text-align: right;
+}
+.align-center {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+.white {
+    color: #FFFFFF;
+}
+.grey {
+    color: #333333;
+}
+.weight-lighter {
+    font-weight: lighter;
+}
+.weight-normal {
+    font-weight: normal;
+}
+.navItem {
+    background-color: #555555;
+    border: 1px solid #666666;
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 70px;
+    text-align: center;
+    text-decoration: none;
+    width: 95px;
+}
+.navItem:hover {
+    background-color: #888888;
+    color: #FFFFFF;
+}
+.navItem img {
+    height: 32px;
+    margin: 10px 10px 3px;
+}
+.navActive {
+    background-color: #FF9900;
+    box-shadow: 0 0 2px #FFFFFF;
+}
+.navActive:hover {
+    background-color: #FF6600;
+}
+#subNav a {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+#subNav a:hover {
+    color: #FFFFFF;
+}
+.subNavItemActive {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #FFFFFF #FFFFFF;
+    border-image: none;
+    border-right: 1px solid #FFFFFF;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    box-shadow: 0 2px 5px 2px #999999;
+    padding: 3px 7px 2px !important;
+}
+fieldset {
+    border: 1px solid #999999;
+    margin: 10px 0;
+    padding: 10px;
+}
+legend {
+    background-color: #777777;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 1px 3px;
+}
+label {
+    margin-left: 10px;
+}
+textarea {
+    font-family: 'Open Sans',Segoe UI,Tahoma,Helvetica,sans-serif;
+    overflow: auto;
+}
+input, select, textarea {
+    margin: 3px 3px 3px 10px;
+}
+input[type="button"] {
+    background-color: #777777;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 2px 5px;
+}
+input[type="button"]:hover {
+    background-color: #999999;
+}
+.orangeButton, button {
+    background-color: #FF6600;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    margin: 5px 3px 3px;
+    padding: 2px 5px;
+}
+.orangeButton:hover, button:hover {
+    background-color: #FF9900;
+    cursor: pointer;
+}
+.greenButton {
+    background-color: #789600;
+}
+.greenButton:hover {
+    background-color: #607800;
+}
+.redButton {
+    background-color: #CC3333;
+}
+.redButton:hover {
+    background-color: #FF6600;
+}
+.blueButton {
+    background-color: #426EA0;
+}
+.blueButton:hover {
+    background-color: #688BB3;
+}
+.greyButton {
+    background-color: #444444;
+}
+.greyButton:hover {
+    background-color: #888888;
+}
+div.sliderContent {
+    padding: 10px;
+}
+div.sliderHead h2 {
+    display: inline;
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+}
+div.sliderHead h2:hover {
+    color: #789600;
+    cursor: pointer;
+}
+img.sliderImage {
+    height: 24px;
+    margin-right: 10px;
+    margin-top: -12px;
+    vertical-align: middle;
+    width: 24px;
+}
+pre {
+    background-color: #444444;
+    color: #FFFFFF;
+    overflow-x: auto;
+    padding: 15px;
+}
+blockquote {
+    border-left: 1px solid #FF6600;
+    font-size: 14px;
+    font-style: italic;
+    padding: 10px;
+}
+.highlight {
+    background-color: #FF9900;
+}
+.underlineDotted {
+    border-bottom: 2px dotted #FF6600;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+mark {
+    background-color: #FF9900;
+}
+abbr, dfn {
+    border-bottom: 1px dotted #333333;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #555555 -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-right: medium none;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    margin-bottom: 15px;
+    margin-top: 2px;
+}
+hr.dotted {
+    border-top: 1px dashed #666666;
+}
+hr.light {
+    border-color: #999999;
+}
+.box-content, .box-note {
+    margin: 15px 0;
+    padding: 15px;
+    text-align: justify;
+}
+.box-info, .box-warning, .box-hint, .box-download {
+    color: #FFFFFF;
+    margin: 15px 0;
+    padding: 10px 10px 10px 40px;
+    text-align: justify;
+}
+.box-note {
+    background-color: #FF6600;
+    border-color: #FF9900;
+    color: #FFFFFF;
+}
+.box-info {
+    background: url("../../img/icons/box_info.png") no-repeat scroll 0 0 #296ACC;
+    border-color: #B2B2FF;
+}
+.box-warning {
+    background: url("../../img/icons/box_warning.png") no-repeat scroll 0 0 #CC3333;
+    border-color: #DB4D4D;
+}
+.box-hint {
+    background: url("../../img/icons/box_hint.png") no-repeat scroll 0 0 #FF7700;
+    border-color: #FAE6BE;
+}
+.box-download {
+    background: url("../../img/icons/box_download.png") no-repeat scroll 0 0 #789600;
+    border-color: #DCE6BE;
+}
+.box-content {
+    background: none repeat scroll 0 0 #555555;
+    color: #FFFFFF;
+}
+.table table, tr, td, th {
+    border: medium none;
+    margin: 0;
+}
+.table {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #666666 #666666;
+    border-image: none;
+    border-right: 1px solid #666666;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+}
+.table td, th {
+    padding: 5px;
+}
+.table thead {
+    background-color: #666666;
+    border-bottom: 1px solid #DDDDDD;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.table tfoot {
+    font-style: italic;
+}
+.table tr.dark, th.dark {
+    background-color: #BBBBBB;
+}
+dl.separator dt {
+    clear: both;
+    float: left;
+    padding-right: 10px;
+    width: 150px;
+}
+dl.separator dd {
+    border-left: 1px solid #999999;
+    margin-left: 160px;
+    padding: 5px 0 5px 20px;
+}
+dl.separator dt {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    position: relative;
+}
+dl.separator dt:before {
+    border-top: 1px solid #999999;
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 30px;
+}
+dl.separator dt:after {
+    background: none repeat scroll 0 0 #999999;
+    border: 1px solid #999999;
+    content: "";
+    height: 3px;
+    position: absolute;
+    right: -3px;
+    top: -2px;
+    width: 3px;
+}
+dl.separator dt:first-child:before, dl.separator dt:first-child:after {
+    display: none;
+}
+#headerWrapper {
+    background-color: #333333;
+    border-bottom: 1px solid #999999;
+}
+#header h1 a {
+    color: #FFFFFF;
+    font-size: 46px;
+    text-decoration: none;
+}
+#header h1 a:hover {
+    color: #FF9900;
+}
+#header h2 {
+    color: #CCCCCC;
+    font-size: 16px;
+}
+.groupTitle h3 {
+    font-size: 24px;
+}
+.groupTitle h3:hover {
+    color: #FF6600;
+}
+#content {
+    color: #111111;
+}
+.pageContent {
+    background: none repeat scroll 0 0 rgba(180, 180, 180, 0.2);
+    box-shadow: 0 0 7px #777777;
+}
+#footer {
+    background-color: #CCCCCC;
+    border-left: 1px solid #999999;
+    border-top: 1px solid #999999;
+    color: #222222;
+    font-size: 10px;
+}
+a#goToMobile {
+    background: none repeat scroll 0 0 #789600;
+    color: #FFFFFF;
+    padding: 3px;
+}
+.tile .tileTitle {
+    font-weight: lighter;
+}
+.tile {
+    font-weight: lighter;
+}
+.tile div {
+    font-weight: lighter;
+}
+.tile a {
+    font-weight: lighter;
+}
+.tileFlip {
+    overflow: visible;
+    padding: 0;
+    z-index: 0;
+}
+.tileFlip:hover {
+    border: medium none;
+    box-shadow: none;
+}
+.tileFlip .flipContainer {
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease 0s;
+    width: 100%;
+    z-index: 0;
+}
+.tileFlipped {
+    perspective: 600px;
+}
+.tileFlip:hover .flipContainer {
+    border: 1px solid #FFFFFF !important;
+    box-shadow: 0 0 10px #333333;
+}
+.support3D:hover .flipContainer {
+    transform: rotateY(180deg);
+}
+.tileFlipped .flipBack {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.tileFlipped .flipFront {
+    backface-visibility: hidden;
+}
+.flipFront {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.flipBack {
+    -moz-box-sizing: border-box;
+    color: white;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+.tileFlipped .tileLabelWrapper.bottom {
+    backface-visibility: hidden;
+}
+.tileFlip .tileLabelWrapper.bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.tileHoverEffectFold .slice {
+    width: 75px;
+}
+.tileHoverEffectFold .view-back {
+    width: 35%;
+}
+.tileHoverEffectFold .s2, .tileHoverEffectFold .s3, .tileHoverEffectFold .s4 {
+    margin-left: 75px;
+}
+.tileHoverEffectFold .s1 {
+    background-position: 0 0;
+}
+.tileHoverEffectFold .s2 {
+    background-position: -75px 0;
+}
+.tileHoverEffectFold .s3 {
+    background-position: -150px 0;
+}
+.tileHoverEffectFold .s4 {
+    background-position: -225px 0;
+}
+.tileHoverEffectFold .overlay {
+    width: 75px;
+}
+.tileHoverEffectFold:hover .s2n, .tileHoverEffectFold:hover .s3n, .tileHoverEffectFold:hover .s4n {
+    margin-left: 74px;
+}
+.tileHoverEffectFoldHover {
+    overflow: visible;
+    perspective: 500px;
+}
+.tileHoverEffectFold .slice {
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: 10;
+}
+.tileHoverEffectFoldHover .slice {
+    transform-origin: left center;
+    transition: transform 200ms ease 0s;
+}
+.tileHoverEffectFold .view-back {
+    display: block;
+    float: right;
+    font-size: 16px;
+    height: 100%;
+    padding: 5px 20px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    z-index: 0;
+}
+.tileHoverEffectFold .overlay {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 200ms ease 0s;
+}
+.tileHoverEffectFold:hover .overlay {
+    opacity: 1;
+}
+.tileHoverEffectFold img {
+    position: absolute;
+    z-index: 1;
+}
+.tileHoverEffectFoldHover .s2n {
+    transform: rotate3d(0, 1, 0, -63deg);
+    z-index: 101;
+}
+.tileHoverEffectFoldHover .s3n {
+    transform: rotate3d(0, 1, 0, 126deg);
+    z-index: 101;
+}
+.tileHoverEffectFoldHover .s4n {
+    transform: rotate3d(0, 1, 0, -126deg);
+    z-index: 101;
+}
+.tileHoverEffectFoldHover .s1 > .overlay {
+    background: -moz-linear-gradient(right center , rgba(0, 0, 0, 0.05) 0%, transparent 100%) repeat scroll 0 0 transparent;
+}
+.tileHoverEffectFoldHover .s2 > .overlay {
+    background: -moz-linear-gradient(left center , rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%) repeat scroll 0 0 transparent;
+}
+.tileHoverEffectFoldHover .s3 > .overlay {
+    background: -moz-linear-gradient(right center , rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%) repeat scroll 0 0 transparent;
+}
+.tileHoverEffectFoldHover .s4 > .overlay {
+    background: -moz-linear-gradient(left center , rgba(0, 0, 0, 0.8) 0%, transparent 100%) repeat scroll 0 0 transparent;
+}
+.tileHoverEffectRight {
+    overflow: hidden;
+}
+.tileHoverEffectLeft .view-back {
+    display: block;
+    font-size: 16px;
+    height: 100%;
+    left: 0;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: left;
+    width: 35%;
+    z-index: 0;
+}
+.tileHoverEffectLeft img {
+    height: 100%;
+    position: relative;
+    width: auto;
+    z-index: 1;
+}
+.tileHoverEffectRight {
+    overflow: hidden;
+}
+.tileHoverEffectRight .view-back {
+    display: block;
+    float: right;
+    font-size: 16px;
+    height: 100%;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 35%;
+    z-index: 0;
+}
+.tileHoverEffectRight img {
+    height: 100%;
+    position: relative;
+    width: auto;
+    z-index: 1;
+}
+.tileSlideshowImage, .tileSlideshowImageBack {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.tileSlideshowImageBack {
+    z-index: 2;
+}
+#sl_arrowRight, #sl_arrowLeft {
+    height: 32px;
+    margin-top: -41px;
+    opacity: 0.4;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    z-index: 10 !important;
+}
+#sl_arrowRight:hover, #sl_arrowLeft:hover {
+    cursor: pointer;
+}
+#sl_arrowRight {
+    padding-right: 2px;
+    right: 0;
+}
+#sl_arrowLeft {
+    left: 0;
+    padding-left: 2px;
+}
+a.tileSlideshow .tileLabelWrapper.top {
+    right: 0;
+    top: 0;
+}
+a.tileSlideshow .tileLabelWrapper.bottom {
+    bottom: 0;
+    left: 0;
+}
