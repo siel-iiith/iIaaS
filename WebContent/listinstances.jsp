@@ -1,3 +1,4 @@
+<!--This is the page that lists the instances available on the authenticated user's account -->
 <%@page import="com.dashboard.utils.Utils"%>
 <%@page import="org.jclouds.compute.domain.Hardware"%>
 <%@page import="com.dashboard.utils.Connection"%>
