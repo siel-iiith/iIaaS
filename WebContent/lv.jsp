@@ -1,3 +1,4 @@
+<!--This page displays the list of volumes created by the user. It also provides options to attach or detach a volume-->
 <%@page import="org.jclouds.openstack.nova.v2_0.domain.VolumeAttachment"%>
 <%@page import="org.jclouds.compute.domain.Hardware"%>
 <%@page import="org.jclouds.openstack.nova.v2_0.domain.Volume"%>
