@@ -1,3 +1,5 @@
+<!-- This is the home page that is displayed on authentication -->
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

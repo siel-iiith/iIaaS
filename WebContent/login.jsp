@@ -1,3 +1,4 @@
+<!--This is the login page for the website-->
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -31,7 +32,7 @@
 
 
 <a class="tile group0 " style="margin-top: 45px; margin-left: 30px; width: 300px; height: 145px; background: none repeat scroll 0% 0% rgb(59, 101, 156); display: inline;" href="#!/About">
-<img width="45/" height="45" src="img/icons/box_info.png" style="float:left; margin-top:2px;margin-left:5px;">
+<!-- <img width="45/" height="45" src="images/box_info.png" style="float:left; margin-top:2px;margin-left:5px;"> -->
 <div class="tileTitle" "></div>
 <div class="tileDesc" style="margin-left:56px;text-align:center;font-size:25px;padding-top:45px">OPENSTACK</div>
 </a>

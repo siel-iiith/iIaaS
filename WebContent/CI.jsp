@@ -1,3 +1,4 @@
+<!-- This page provides the interface to create a new instance -->
 <%@page import="org.jclouds.compute.domain.Processor"%>
 <%@page import="org.jclouds.compute.domain.Hardware"%>
 <%@page import="com.dashboard.utils.Utils"%>

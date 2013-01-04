@@ -1,3 +1,4 @@
+<!--This page lists the instances and allows the user to delete a volume -->
 <%@page import="org.jclouds.openstack.nova.v2_0.domain.VolumeAttachment"%>
 <%@page import="org.jclouds.compute.domain.Hardware"%>
 <%@page import="org.jclouds.openstack.nova.v2_0.domain.Volume"%>
